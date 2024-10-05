@@ -1,0 +1,334 @@
+91% of storage used … If you run out, you can't create, edit, and upload files. Get 100 GB of storage for ₹130.00 ₹35.00/month for 2 months.
+git config --global user.name "Prasad Polarapu"
+git config --global user.email "devopstraining2015@gmail.com"
+
+git config --list
+
+Clone git repo
+--------------
+git clone https://github.com/polarapu/batch103.git
+ls
+cd batch103
+
+touch file1
+ls
+git status
+git add file1
+git status
+git commit -m "label" file1
+git status
+git log
+git show
+git show cid
+
+git push
+user & passwd
+
+============================
+touch file2 file3 file4
+ls
+
+git add .
+or
+git add *
+or
+git add  -A
+or
+git add file1 file2 file3 file4
+
+git status
+git commit -m "label"
+git push
+
+Touch, Cat, VI
+==============
+
+Touch
+=====
+touch file1
+touch file2 file3 file4
+
+CAT
+===
+cat > file5
+......
+......
+ctrl+d
+
+ls
+
+cat file5
+
+cat >> file5
+.......
+.......
+ctrl+d
+
+VI
+==
+vi file6
+---------
+esc i
+.....
+.....
+.....
+esc :w!
+    :q!
+or
+esc :wq!
+
+==================
+rm file1 (to delete file in local)
+
+git add .
+git status
+git commit -m "label"
+git push
+========================
+
+mkdir dir1
+ls
+cd dir1
+ls
+touch file1 file2
+cd ..
+git status
+git add .
+git commit -m "label"
+git push
+
+Ref:
+[cd dir1
+ls
+touch file1 file2
+cd ..]
+
+or
+
+touch dir1/file1
+touch dir1/file2
+
+git add dir1
+or
+git add dir1/file1
+
+dir delete
+==========
+rm -rf dir1
+ls
+git status
+git add .
+git commit -m "deleting dir1"
+git push
+
+=======================================
+git clone https://github.com/polarapu/batch103.git
+ls
+cd batch103
+ls
+touch prasad
+ls
+git status
+git add .
+git status
+git commit -m "label"
+git status
+git push
+git pull --rebase
+git push
+git pull --rebase
+git push
+
+=========================
+Branch
+======
+git branch
+git branch release-1
+git checkout release-1
+git checkout main
+git merge branch-name
+
+git branch -d release-1 (delete on local)
+git branch -D release-1
+
+git branch release1
+
+git push origin release1  (upload branch into git-hub)
+or
+git push git-hub-url release1
+
+git push origin -d release-1  (delete on git-hub)
+
+FORK
+====
+
+Alias
+=====
+git status
+git config --global alias.s "status"
+git s
+
+git config --list
+git config --global alias.cl "config --list"
+git cl
+
+git commit -m "test-commit"
+git config --global alias.cmt "commit -m "test-commit""
+git cmt
+
+git config --global --unset alias.s  (to remove alias)
+
+==============================
+Logs
+====
+
+git log
+git log -n
+git log --oneline
+git log --oneline -n
+
+git log --author=prasad
+git log --author=prasad -n
+git log --author=prasad --oneline
+
+git log --since=yy-mm-dd
+or
+git log --after=yy-mm-dd
+
+git log --until=yy-mm-dd
+or
+git log --before=yy-mm-dd
+
+git log --since=yy-mm-dd --until=yy-mm-dd
+or
+git log --after=yy-mm-dd --before=yy-mm-dd
+
+git log --since="yy-mm-dd 11:30" --until="yy-mm-dd 23:00"
+
+git log --since="yy-mm-dd 11:30" --until="yy-mm-dd 23:00" --author=name
+
+git log --grep sample
+git log -- file "file-name"
+
+========================
+merge conflicts
+===============
+git merge --abort  (temp skip)
+
+
+Merge vs rebase
+===============
+git merge branch-name
+git rebase branch-name
+
+git pull --rebase
+
+Stash Memory
+============
+git stash list
+git stash save "label1"
+git stash show stash@{0}
+git stash show -p stash@{0}
+
+POP = cut
+===
+git stash pop
+git stash pop stash@{x}
+
+APPLY = copy
+=====
+git stash apply
+git stash apply stash@{x}
+
+DROP = delete
+====
+git stash drop
+git stash drop stash@{x}
+
+TAG
+===
+git tag
+git tag T-1.0
+git show T-1.0
+git tag -d T-1.0
+
+git tag T-10 cid
+
+git push origin T-1.0
+git push --tags (to upload all tags)
+
+git push origin -d T-1.0
+
+multi commit
+============
+git commit -m "label1" -m "label2" -m "label3"
+
+
+Amend
+=====
+git commit --amend -m "label"
+
+reset commands
+==============
+git add file1  (workspace to staging)
+git reset head file1  (staging to workspace)
+
+git commit -m "label" (staging to local)
+git reset --soft cid  (local to staging) (n-1)
+
+git reset --mixed cid  (local to workspace) (n-1)
+git reset --hard cid  (it will delete commit and committed files) (n-1)
+
+Cherry-pick
+===========
+git cherry-pick cid
+
+.gitignore
+==========
+
+vi .gitignore
+-------------
+king1
+king2
+
+
+fetch
+=====
+git pull = git fetch + git merge
+
+
+diff
+====
+git diff file1 file2
+git diff main release1
+
+
+revert
+=======
+git revert cid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
