@@ -1,14 +1,14 @@
 91% of storage used … If you run out, you can't create, edit, and upload files. Get 100 GB of storage for ₹130.00 ₹35.00/month for 2 months.
-git config --global user.name "Prasad Polarapu"
-git config --global user.email "devopstraining2015@gmail.com"
+git config --global user.name "cehv9solutios"
+git config --global user.email "cehv9solutions+1@gmail.com"
 
 git config --list
 
 Clone git repo
 --------------
-git clone https://github.com/polarapu/batch103.git
+git clone https://github.com/cehv9solutions/GIT.git
 ls
-cd batch103
+cd git
 
 touch file1
 ls
@@ -122,9 +122,9 @@ git commit -m "deleting dir1"
 git push
 
 =======================================
-git clone https://github.com/polarapu/batch103.git
+git clone https://github.com/cehv9solutions/git.git
 ls
-cd batch103
+cd git
 ls
 touch prasad
 ls
